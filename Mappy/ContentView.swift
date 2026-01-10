@@ -9,48 +9,72 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @State private var selectedTab: String = "map"
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        ZStack {
+            VStack(spacing: 0) {
+                // Tab Views
+                if selectedTab == "map" {
+                    MapView()
+                } else if selectedTab == "items" {
+                    ItemsView(items: items, modelContext: modelContext)
+                } else if selectedTab == "settings" {
+                    SettingsView()
+                }
+                
+                // Bottom Navigation Bar
+                HStack(spacing: 0) {
+                    TabBarItem(
+                        icon: "map.fill",
+                        label: "Map",
+                        isSelected: selectedTab == "map"
+                    ) {
+                        selectedTab = "map"
+                    }
+                    
+                    TabBarItem(
+                        icon: "list.bullet",
+                        label: "Items",
+                        isSelected: selectedTab == "items"
+                    ) {
+                        selectedTab = "items"
+                    }
+                    
+                    TabBarItem(
+                        icon: "gear",
+                        label: "Settings",
+                        isSelected: selectedTab == "settings"
+                    ) {
+                        selectedTab = "settings"
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .frame(height: 70)
+                .background(Color(UIColor.systemBackground))
+                .border(Color.gray.opacity(0.3), width: 1)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
         }
     }
+}
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+struct TabBarItem: View {
+    let icon: String
+    let label: String
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 4) {
+                Image(systemName: icon)
+                    .font(.system(size: 24))
+                Text(label)
+                    .font(.caption2)
             }
+            .frame(maxWidth: .infinity)
+            .foregroundColor(isSelected ? .blue : .gray)
         }
     }
 }
