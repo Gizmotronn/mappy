@@ -8,16 +8,14 @@
 import SwiftUI
 import MapKit
 
+
 struct MapView: View {
-    @State private var position: MapCameraPosition = .region(MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: -33.8688, longitude: 151.2093),
-        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-    ))
+    @Binding var position: MapCameraPosition
     @StateObject private var locationManager = LocationManager()
-    
+
     var body: some View {
         ZStack {
-            Map(position: $position) {
+            Map(position: $position, interactionModes: .all) {
                 UserAnnotation()
             }
             .mapStyle(.standard)
@@ -39,5 +37,6 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView()
+    @State var previewPosition: MapCameraPosition = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -33.8688, longitude: 151.2093), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)))
+    return MapView(position: $previewPosition)
 }
