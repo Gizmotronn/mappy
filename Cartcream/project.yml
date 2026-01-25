@@ -1,0 +1,56 @@
+name: MeetPoll
+options:
+  bundleIdPrefix: com.cartcream
+settings:
+  base:
+    SWIFT_VERSION: 5.9
+    IPHONEOS_DEPLOYMENT_TARGET: 16.0
+
+targets:
+  MeetPoll:
+    type: application
+    platform: iOS
+    sources:
+      - path: MeetPoll
+    resources:
+      - path: MeetPoll/Assets.xcassets
+    settings:
+      base:
+        INFOPLIST_FILE: MeetPoll/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.cartcream.meetpoll
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+    dependencies:
+      - target: MeetPollMessages
+        embed: true
+    postBuildScripts:
+      - name: Embed Messages Extension
+        basedOnDependencyAnalysis: false
+        script: |
+          APP_BUNDLE="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+          EXTENSION="${TARGET_BUILD_DIR}/MeetPollMessages.appex"
+          PLUGINS_DIR="${APP_BUNDLE}/PlugIns"
+          if [ -d "$EXTENSION" ]; then
+            mkdir -p "$PLUGINS_DIR"
+            rsync -a "$EXTENSION" "$PLUGINS_DIR/"
+          fi
+
+  MeetPollMessages:
+    type: bundle
+    platform: iOS
+    productType: com.apple.product-type.app-extension.messages
+    sources:
+      - path: MeetPollMessages
+    resources:
+      - path: MeetPollMessages/Assets.xcassets
+    settings:
+      base:
+        INFOPLIST_FILE: MeetPollMessages/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.cartcream.meetpoll.messages
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        WRAPPER_EXTENSION: appex
+        SKIP_INSTALL: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"
+    dependencies:
+      - sdk: Messages.framework
+      - sdk: MapKit.framework

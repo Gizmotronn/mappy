@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12C73983F158A7D16FF938FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFEEFD59B254547A1AE0E6 /* Extensions.swift */; };
+		287D6A8FCD1EF6359743404E /* PollModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0D3640142F91B4DBF796B /* PollModels.swift */; };
+		2AE84479CF3150FCD158E730 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC132B9B6C2F52AEFDDAC693 /* MessagesViewController.swift */; };
+		54DD8E01243F272E5D4AA354 /* MeetPollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887DCC816757B0E031EB9CD /* MeetPollApp.swift */; };
+		5BC8E063ECBAE1A53136B2FA /* MeetPollMessages.appex in Resources */ = {isa = PBXBuildFile; fileRef = B139CD52CCB1921B551BE69A /* MeetPollMessages.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6FF9856D513DAB60F56CE165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FBFE0E0BC2AFCCF2CC3EBC8 /* Assets.xcassets */; };
+		76B52DD912D37CA746F458DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29FC37970D6C50D7104A684 /* ContentView.swift */; };
+		A3A309B093C6D3D664F96AE9 /* PollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE66C523FA2A5EDCC726A5 /* PollViewModel.swift */; };
+		AA5FB0651BD81BF19995E4E3 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C90F78BD10082FADCA1A33 /* Messages.framework */; };
+		D07E5A51E98153E486EEDF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9417D22E06FC9AF4DEA3BEB /* Assets.xcassets */; };
+		D30EEAA1232AAC4950F98F7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A276F415E4255EDC1A1C335 /* MapKit.framework */; };
+		DF7FF9DC73BB7461A5676392 /* PlaceSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D7D7FDB2EC7E2A59DD0877 /* PlaceSearchService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D51135F259AB49B9FE484C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 496A1772B0E1825FB65C62F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5838718715A9AA23E126627;
+			remoteInfo = MeetPollMessages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		132FACA5C54C801172A42CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		17CFEEFD59B254547A1AE0E6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1887DCC816757B0E031EB9CD /* MeetPollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetPollApp.swift; sourceTree = "<group>"; };
+		23C90F78BD10082FADCA1A33 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		34AE66C523FA2A5EDCC726A5 /* PollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollViewModel.swift; sourceTree = "<group>"; };
+		68D7D7FDB2EC7E2A59DD0877 /* PlaceSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchService.swift; sourceTree = "<group>"; };
+		7A276F415E4255EDC1A1C335 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7CC0D3640142F91B4DBF796B /* PollModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollModels.swift; sourceTree = "<group>"; };
+		7FBFE0E0BC2AFCCF2CC3EBC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B139CD52CCB1921B551BE69A /* MeetPollMessages.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = MeetPollMessages.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29FC37970D6C50D7104A684 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9417D22E06FC9AF4DEA3BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC132B9B6C2F52AEFDDAC693 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		EE88DF411C393E95967EACFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F2450F520EDD678024BE3BF7 /* MeetPoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetPoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC4709FB199C9160ECCA4CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5FB0651BD81BF19995E4E3 /* Messages.framework in Frameworks */,
+				D30EEAA1232AAC4950F98F7E /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F4426DB1AC74087A5EC5FE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A276F415E4255EDC1A1C335 /* MapKit.framework */,
+				23C90F78BD10082FADCA1A33 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1138ADEE72A8332BC5FFBC7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2450F520EDD678024BE3BF7 /* MeetPoll.app */,
+				B139CD52CCB1921B551BE69A /* MeetPollMessages.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52738BEF64183DD758DBAE9B = {
+			isa = PBXGroup;
+			children = (
+				6FEE7C41310F6C10F806002C /* MeetPoll */,
+				5AB38BFDCB6AA2ECBC473C03 /* MeetPollMessages */,
+				0F4426DB1AC74087A5EC5FE7 /* Frameworks */,
+				1138ADEE72A8332BC5FFBC7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AB38BFDCB6AA2ECBC473C03 /* MeetPollMessages */ = {
+			isa = PBXGroup;
+			children = (
+				E9417D22E06FC9AF4DEA3BEB /* Assets.xcassets */,
+				C29FC37970D6C50D7104A684 /* ContentView.swift */,
+				17CFEEFD59B254547A1AE0E6 /* Extensions.swift */,
+				132FACA5C54C801172A42CD5 /* Info.plist */,
+				EC132B9B6C2F52AEFDDAC693 /* MessagesViewController.swift */,
+				68D7D7FDB2EC7E2A59DD0877 /* PlaceSearchService.swift */,
+				7CC0D3640142F91B4DBF796B /* PollModels.swift */,
+				34AE66C523FA2A5EDCC726A5 /* PollViewModel.swift */,
+			);
+			path = MeetPollMessages;
+			sourceTree = "<group>";
+		};
+		6FEE7C41310F6C10F806002C /* MeetPoll */ = {
+			isa = PBXGroup;
+			children = (
+				7FBFE0E0BC2AFCCF2CC3EBC8 /* Assets.xcassets */,
+				EE88DF411C393E95967EACFD /* Info.plist */,
+				1887DCC816757B0E031EB9CD /* MeetPollApp.swift */,
+			);
+			path = MeetPoll;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5838718715A9AA23E126627 /* MeetPollMessages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FB168FCE6A507726B6681C3 /* Build configuration list for PBXNativeTarget "MeetPollMessages" */;
+			buildPhases = (
+				F08C87D2E7D727B691674144 /* Sources */,
+				65A0E8B071A459A0D0ACF8E7 /* Resources */,
+				3FC4709FB199C9160ECCA4CC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetPollMessages;
+			packageProductDependencies = (
+			);
+			productName = MeetPollMessages;
+			productReference = B139CD52CCB1921B551BE69A /* MeetPollMessages.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+		EFA51FCCC464870A56F13854 /* MeetPoll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C891B4C4E00E0FDEB131001E /* Build configuration list for PBXNativeTarget "MeetPoll" */;
+			buildPhases = (
+				880DE8F166CB9BA2C6D1AAF9 /* Sources */,
+				1EF56DBDE4D21B96EC4B38E2 /* Resources */,
+				6322E11E4940394F9C7D0A72 /* Embed Messages Extension */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0702CE228588DB63C98C807B /* PBXTargetDependency */,
+			);
+			name = MeetPoll;
+			packageProductDependencies = (
+			);
+			productName = MeetPoll;
+			productReference = F2450F520EDD678024BE3BF7 /* MeetPoll.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		496A1772B0E1825FB65C62F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 09CD6D899C86D0F8A19A56DB /* Build configuration list for PBXProject "MeetPoll" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 52738BEF64183DD758DBAE9B;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFA51FCCC464870A56F13854 /* MeetPoll */,
+				C5838718715A9AA23E126627 /* MeetPollMessages */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EF56DBDE4D21B96EC4B38E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF9856D513DAB60F56CE165 /* Assets.xcassets in Resources */,
+				5BC8E063ECBAE1A53136B2FA /* MeetPollMessages.appex in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A0E8B071A459A0D0ACF8E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07E5A51E98153E486EEDF5A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6322E11E4940394F9C7D0A72 /* Embed Messages Extension */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Messages Extension";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_BUNDLE=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\nEXTENSION=\"${TARGET_BUILD_DIR}/MeetPollMessages.appex\"\nPLUGINS_DIR=\"${APP_BUNDLE}/PlugIns\"\nif [ -d \"$EXTENSION\" ]; then\n  mkdir -p \"$PLUGINS_DIR\"\n  rsync -a \"$EXTENSION\" \"$PLUGINS_DIR/\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		880DE8F166CB9BA2C6D1AAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54DD8E01243F272E5D4AA354 /* MeetPollApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08C87D2E7D727B691674144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B52DD912D37CA746F458DD /* ContentView.swift in Sources */,
+				12C73983F158A7D16FF938FC /* Extensions.swift in Sources */,
+				2AE84479CF3150FCD158E730 /* MessagesViewController.swift in Sources */,
+				DF7FF9DC73BB7461A5676392 /* PlaceSearchService.swift in Sources */,
+				287D6A8FCD1EF6359743404E /* PollModels.swift in Sources */,
+				A3A309B093C6D3D664F96AE9 /* PollViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0702CE228588DB63C98C807B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5838718715A9AA23E126627 /* MeetPollMessages */;
+			targetProxy = 5D51135F259AB49B9FE484C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		54252297BE1A7B5B069A8E10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		7005DECAE76EDBDDD777D5C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MeetPollMessages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartcream.meetpoll.messages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = appex;
+			};
+			name = Release;
+		};
+		90E2ACF2A6F9C9A4F251D47E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MeetPollMessages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartcream.meetpoll.messages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = appex;
+			};
+			name = Debug;
+		};
+		CD0039DCE34A6621076A5046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MeetPoll/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartcream.meetpoll;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D926B67CFF3F0A78BED36ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		FB43AAA8422EE56E56C77708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MeetPoll/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartcream.meetpoll;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09CD6D899C86D0F8A19A56DB /* Build configuration list for PBXProject "MeetPoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54252297BE1A7B5B069A8E10 /* Debug */,
+				D926B67CFF3F0A78BED36ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4FB168FCE6A507726B6681C3 /* Build configuration list for PBXNativeTarget "MeetPollMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90E2ACF2A6F9C9A4F251D47E /* Debug */,
+				7005DECAE76EDBDDD777D5C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C891B4C4E00E0FDEB131001E /* Build configuration list for PBXNativeTarget "MeetPoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0039DCE34A6621076A5046 /* Debug */,
+				FB43AAA8422EE56E56C77708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 496A1772B0E1825FB65C62F4 /* Project object */;
+}
